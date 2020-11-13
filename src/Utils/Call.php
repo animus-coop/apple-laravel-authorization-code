@@ -40,11 +40,20 @@ class Call {
 
         $response = curl_exec($curl);
         $response = json_decode($response);
-        $responseArr = [];
-        $responseArr['authorization'] = $response;
-        $responseArr['user'] = Jwt::parseJWT($response->id_token);
+        if(!isset($response->error)) {
+            $responseArr = [];
+            $responseArr['authorization'] = $response;
+            $responseArr['user'] = Jwt::parseJWT($response->id_token);
 
-        return $responseArr;
+            return $responseArr;
+        }else{
+            if($response->error == 'client_error'){
+                throw new \Exception('something wrong please check your credentials');
+            }
+            if($response->error == 'invalid_grant'){
+                throw new \Exception('your access code is invalid or has expired');
+            }
+        }
 
     }
 }

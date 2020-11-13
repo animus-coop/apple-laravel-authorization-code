@@ -30,7 +30,7 @@ class  Jwt
             'sub' => $info->client_id,
         ];
 
-        $key = openssl_pkey_get_private($info->key);
+        $key = openssl_pkey_get_private(file_get_contents($info->key));
         if (!$key) {
             return false;
         }
@@ -43,7 +43,7 @@ class  Jwt
         $signature = '';
         $success = openssl_sign($signing_input, $signature, $key, 'SHA256');
         if (!$success) {
-            return false;
+            throw new \Exception('Encryption key fail, please check your p8 key file');
         }
         $signature = $this->signatureFromDER($signature, 256);
 

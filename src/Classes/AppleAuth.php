@@ -75,13 +75,13 @@ class AppleAuth
 
     private static function errorResponse($error)
     {
-        throw new Exception($error);
+        throw new \Exception($error);
 
     }
 
     private static function buildObjJwt($data)
     {
-        $objJwtRequest = new stdClass();
+        $objJwtRequest = new \stdClass();
         $objJwtRequest->key_id = $data['key_id'];
         $objJwtRequest->team_id = $data['team_id'];
         $objJwtRequest->key = $data['key'];
@@ -91,7 +91,7 @@ class AppleAuth
 
     private static function buildObjCall($data)
     {
-        $objJwtRequest = new stdClass();
+        $objJwtRequest = new \stdClass();
         $objJwtRequest->code = $data['code'];
         $objJwtRequest->client_id = $data['client_id'];
         return $objJwtRequest;
