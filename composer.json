@@ -38,7 +38,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "AnimusCoop\\AppleTokenAuth\\AppleTokenAuthServiceProvider"
+        "animus-coop\\apple-laravel-authorization-code\\AppleTokenAuthServiceProvider"
       ]
     }
   }
