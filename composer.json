@@ -23,8 +23,7 @@
   },
   "autoload": {
     "psr-4": {
-      "AnimusCoop\\AppleTokenAuth\\": "src/",
-      "AnimusCoop\\AppleTokenAuth\\Tests\\": "tests/"
+      "AnimusCoop\\AppleTokenAuth\\": "src/"
     }
   },
   "scripts": {
@@ -38,7 +37,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "animus-coop\\apple-laravel-authorization-code\\AppleTokenAuthServiceProvider"
+        "AnimusCoop\\AppleTokenAuth\\AppleTokenAuthServiceProvider"
       ]
     }
   }
