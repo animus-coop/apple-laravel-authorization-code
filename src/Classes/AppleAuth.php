@@ -14,11 +14,11 @@ class AppleAuth
     public function __construct($data)
     {
         $initialData = [
-            'client_id' => isset($data['client_id']) ?? null,
-            'key_id'    => isset($data['key_id']) ?? null,
-            'key'       => isset($data['key']) ?? null,
-            'team_id'   => isset($data['team_id']) ?? null,
-            'code'      => isset($data['code']) ?? null
+            'client_id' => isset($data['client_id']) ? $data['client_id'] : null,
+            'key_id'    => isset($data['key_id']) ? $data['key_id'] : null,
+            'key'       => isset($data['key']) ? $data['key'] : null,
+            'team_id'   => isset($data['team_id']) ? $data['team_id'] : null,
+            'code'      => isset($data['code']) ? $data['code'] : null
         ];
         self::validateData($initialData);
 
