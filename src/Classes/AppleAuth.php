@@ -1,9 +1,9 @@
 <?php
 
-namespace Classes;
+namespace AnimusCoop\AppleTokenAuth\Classes;
 
-use Utils\Jwt;
-use Utils\Call;
+use AnimusCoop\AppleTokenAuth\Utils\Jwt;
+use AnimusCoop\AppleTokenAuth\Utils\Call;
 
 
 class AppleAuth

@@ -1,6 +1,6 @@
 <?php
 
-namespace Utils;
+namespace AnimusCoop\AppleTokenAuth\Utils;
 
 class  Jwt
 {
