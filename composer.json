@@ -1,0 +1,46 @@
+{
+  "name": "animus-coop/apple-laravel-authorization-code",
+  "license": "MIT",
+  "description": "Get User Data with the result code of a apple sign in button",
+  "version": "v1.0",
+  "keywords": [
+    "apple-laravel-authorization-code","sign in apple","apple","laravel","apple jwt","create jwt apple php","jwt php"
+  ],
+  "authors": [
+    {
+      "name": "Isaias Dias",
+      "email": "isaias@animus.com.ar",
+      "homepage": "https://www.animus.coop"
+    }
+  ],
+  "require": {
+    "laravel/framework": ">=8.0",
+    "laravel/jetstream": "^1.6"
+  },
+  "require-dev": {
+    "phpunit/phpunit" : "^7.3",
+    "orchestra/testbench": "~3.0",
+    "mockery/mockery": "~0.9||~1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "AnimusCoop\\applelaravelauthorizationcode\\": "src/",
+      "AnimusCoop\\applelaravelauthorizationcode\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "composer dump-autoload"
+    ],
+    "post-update-cmd": [
+      "composer dump-autoload"
+    ]
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "AnimusCoop\\applelaravelauthorizationcode\\AppleTokenAuthGeneratorServiceProvider"
+      ]
+    }
+  }
+}
