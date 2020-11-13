@@ -39,8 +39,9 @@ class Call {
         ));
 
         $response = curl_exec($curl);
+        $response = json_decode($response);
         $responseArr = [];
-        $responseArr['authorization'] = json_decode($response);
+        $responseArr['authorization'] = $response;
         $responseArr['user'] = Jwt::parseJWT($response->id_token);
 
         return $responseArr;
