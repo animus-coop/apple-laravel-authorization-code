@@ -19,7 +19,7 @@ Add Service Provider in config/app.php
 
 # Use
 
-In your controller export.
+Controller.
 
 ```
 use AnimusCoop\AppleTokenAuth\Classes\AppleAuth;
@@ -40,14 +40,32 @@ $appleAuth = new AppleAuth($data);
 
 $jwt = $appleAuth->getJwtSigned();
 
-// Refresh Token and user Data
+// Refresh Token and get user Data
 $user = $appleAuth->getUserData();
 
-
-/*
- 
- 
- 
- */
+```
+Response getUserData()
+```
+[
+  "authorization" => {
+    "access_token": ""
+    "token_type": "Bearer"
+    "expires_in": 3600
+    "refresh_token": ""
+    "id_token": ""
+  }
+  "user" => {
+    "iss": "https://appleid.apple.com"
+    "aud": "your client id"
+    "exp": 1605393470
+    "iat": 1605307070
+    "sub": ""
+    "at_hash": ""
+    "email": "isaias@animus.com.ar"
+    "email_verified": "true"
+    "auth_time": 1605307067
+    "nonce_supported": true
+  }
+]
 
 ```
