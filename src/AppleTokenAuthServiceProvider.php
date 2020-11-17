@@ -1,3 +1,6 @@
+/*
+* Author : Isaias
+* */
 <?php
 
 namespace AnimusCoop\AppleTokenAuth;
