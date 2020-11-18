@@ -2,7 +2,7 @@
   "name": "animus-coop/apple-laravel-authorization-code",
   "license": "MIT",
   "description": "Get User Data with the result code of a apple sign in button",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "minimum-stability": "dev",
   "prefer-stable": true,
   "keywords": [
