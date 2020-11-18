@@ -2,7 +2,9 @@
   "name": "animus-coop/apple-laravel-authorization-code",
   "license": "MIT",
   "description": "Get User Data with the result code of a apple sign in button",
-  "version": "1.0",
+  "version": "1.0.2",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
   "keywords": [
     "apple-laravel-authorization-code","sign in apple","apple","laravel","apple jwt","create jwt apple php","jwt php"
   ],
